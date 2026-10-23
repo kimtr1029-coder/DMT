@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1220" height="470" viewBox="0 0 1220 470">
+<title>DMT_Worst_tier_selection</title>
+<rect width="1220" height="470" fill="white"/>
+<rect x="315" y="74" width="882" height="161" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.1"/>
+<rect x="538" y="297" width="236" height="145" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.1"/>
+<path d="M 24,51 L 1196,51" fill="none" stroke="#b8c4ce" stroke-width="1.3"/>
+<path d="M 155,115 L 155,133" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="155,133 159.4,124.0 150.6,124.0" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 275,187 L 337,187 L 337,132 L 377,132" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="377,132 368.0,127.6 368.0,136.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 275,233 L 353,233 L 353,190 L 377,190" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="377,190 368.0,185.6 368.0,194.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 494,132 L 530,132 L 530,151 L 553,151" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="553,151 544.0,146.6 544.0,155.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 494,190 L 530,190 L 530,173 L 553,173" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="553,173 544.0,168.6 544.0,177.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 353,225 L 631,225 L 631,204 L 645,204" fill="none" stroke="#687787" stroke-width="1.1"/>
+<polygon points="645,204 636.0,199.6 636.0,208.4" fill="#687787" stroke="#687787" stroke-width="0.5"/>
+<path d="M 620,162 L 763,162" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="763,162 754.0,157.6 754.0,166.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 736,204 L 750,204 L 750,175 L 763,175" fill="none" stroke="#687787" stroke-width="1.2"/>
+<polygon points="763,175 754.0,170.6 754.0,179.4" fill="#687787" stroke="#687787" stroke-width="0.5"/>
+<path d="M 829,165 L 909,165" fill="none" stroke="#285e86" stroke-width="1.8"/>
+<polygon points="909,165 900.0,160.6 900.0,169.4" fill="#285e86" stroke="#285e86" stroke-width="0.5"/>
+<path d="M 1122,165 L 1180,165" fill="none" stroke="#285e86" stroke-width="1.8"/>
+<polygon points="1180,165 1171.0,160.6 1171.0,169.4" fill="#285e86" stroke="#285e86" stroke-width="0.5"/>
+<path d="M 315,246 L 1197,246" fill="none" stroke="#b8c4ce" stroke-width="1.25"/>
+<path d="M 290,362 L 315,362 L 315,345 L 347,345" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="347,345 338.0,340.6 338.0,349.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 1153,283 L 373,283 L 373,321" fill="none" stroke="#687787" stroke-width="1.3"/>
+<polygon points="373,321 377.4,312.0 368.6,312.0" fill="#687787" stroke="#687787" stroke-width="0.5"/>
+<path d="M 404,354 L 438,354" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="438,354 429.0,349.6 429.0,358.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 489,354 L 517,354" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="517,354 508.0,349.6 508.0,358.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 517,319 L 517,414" fill="none" stroke="#202832" stroke-width="1.3"/>
+<circle cx="517" cy="354" r="3" fill="#202832" stroke="#202832" stroke-width="0"/>
+<path d="M 517,321 L 538,321" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="538,321 529.0,316.6 529.0,325.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 774,321 L 814,321" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="814,321 805.0,316.6 805.0,325.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 517,369 L 538,369" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="538,369 529.0,364.6 529.0,373.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 774,369 L 814,369" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="814,369 805.0,364.6 805.0,373.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 517,417 L 538,417" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="538,417 529.0,412.6 529.0,421.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 774,417 L 814,417" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="814,417 805.0,412.6 805.0,421.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 926,321 L 952,321" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="952,321 943.0,316.6 943.0,325.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 926,369 L 952,369" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="952,369 943.0,364.6 943.0,373.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 926,417 L 952,417" fill="none" stroke="#202832" stroke-width="1.45"/>
+<polygon points="952,417 943.0,412.6 943.0,421.4" fill="#202832" stroke="#202832" stroke-width="0.5"/>
+<path d="M 1078,321 L 1102,321" fill="none" stroke="#687787" stroke-width="1.25"/>
+<polygon points="1102,321 1093.0,316.6 1093.0,325.4" fill="#687787" stroke="#687787" stroke-width="0.5"/>
+<path d="M 1078,369 L 1102,369" fill="none" stroke="#687787" stroke-width="1.25"/>
+<polygon points="1102,369 1093.0,364.6 1093.0,373.4" fill="#687787" stroke="#687787" stroke-width="0.5"/>
+<path d="M 1144,343 L 1153,343 L 1153,283" fill="none" stroke="#687787" stroke-width="1.3"/>
+<path d="M 1078,417 L 1179,417" fill="none" stroke="#ac3540" stroke-width="1.8"/>
+<polygon points="1179,417 1170.0,412.6 1170.0,421.4" fill="#ac3540" stroke="#ac3540" stroke-width="0.5"/>
+<path d="M 24,453 L 1196,453" fill="none" stroke="#b8c4ce" stroke-width="1.3"/>
+<rect x="56" y="76" width="198" height="39" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="24" y="134" width="266" height="307" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.35"/>
+<rect x="38" y="169" width="237" height="37" rx="0" fill="#ecf3f8" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="38" y="215" width="237" height="37" rx="0" fill="#ecf3f8" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="39" y="282" width="70" height="32" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="113" y="282" width="92" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="209" y="282" width="66" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="39" y="320" width="70" height="32" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="113" y="320" width="92" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="209" y="320" width="66" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="39" y="358" width="70" height="32" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="113" y="358" width="92" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="209" y="358" width="66" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="39" y="396" width="70" height="32" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="113" y="396" width="92" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="209" y="396" width="66" height="32" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="377" y="113" width="117" height="38" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="377" y="171" width="117" height="38" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="553" y="136" width="67" height="52" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="645" y="188" width="91" height="33" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="763" y="143" width="66" height="44" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="909" y="141" width="213" height="48" rx="0" fill="#ecf3f8" stroke="#285e86" stroke-width="1.25"/>
+<polygon points="348,316 404,334 404,375 348,393" fill="#ffffff" stroke="#202832" stroke-width="1.5"/>
+<circle cx="464" cy="354" r="25" fill="#fff2f1" stroke="#ac3540" stroke-width="1.5"/>
+<rect x="546" y="303" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="659" y="303" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="546" y="351" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="659" y="351" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="546" y="399" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="659" y="399" width="109" height="36" rx="0" fill="#ffffff" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="814" y="303" width="112" height="36" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="814" y="351" width="112" height="36" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="814" y="399" width="112" height="36" rx="0" fill="#ffffff" stroke="#202832" stroke-width="1.25"/>
+<rect x="952" y="303" width="126" height="36" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="952" y="351" width="126" height="36" rx="0" fill="#f5f8fa" stroke="#b8c4ce" stroke-width="1.25"/>
+<rect x="952" y="399" width="126" height="36" rx="0" fill="#fff2f1" stroke="#ac3540" stroke-width="1.25"/>
+<polygon points="1102,309 1144,322 1144,364 1102,382" fill="#ffffff" stroke="#687787" stroke-width="1.2"/>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="24.000" y="36.000" font-size="25.000" font-weight="700" font-style="normal">(c) BER check and shared worst-tier selector</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#285e86"><tspan x="954.562" y="35.000" font-size="16.000" font-weight="400" font-style="normal">255 tones  ·  6 multiply cycles</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="62.057" y="101.110" font-size="17.000" font-weight="400" font-style="normal">(M</tspan><tspan x="83.357" y="105.190" font-size="12.240" font-weight="400" font-style="normal">k</tspan><tspan x="90.445" y="101.110" font-size="17.000" font-weight="400" font-style="normal">, p</tspan><tspan x="112.043" y="105.190" font-size="12.240" font-weight="400" font-style="normal">k</tspan><tspan x="119.132" y="101.110" font-size="17.000" font-weight="400" font-style="normal">)  ·  k = 1…255</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="39.000" y="158.000" font-size="16.000" font-weight="700" font-style="normal">STREAM ACCUMULATORS</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="98.879" y="193.770" font-size="19.000" font-weight="400" font-style="normal">E</tspan><tspan x="110.884" y="198.330" font-size="13.680" font-weight="400" font-style="normal">w</tspan><tspan x="122.073" y="193.770" font-size="19.000" font-weight="400" font-style="normal"> = Σ b</tspan><tspan x="180.177" y="198.330" font-size="13.680" font-weight="400" font-style="normal">k</tspan><tspan x="188.099" y="193.770" font-size="19.000" font-weight="400" font-style="normal"> p</tspan><tspan x="206.199" y="198.330" font-size="13.680" font-weight="400" font-style="normal">k</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="116.970" y="239.770" font-size="19.000" font-weight="400" font-style="normal">B = Σ b</tspan><tspan x="188.108" y="244.330" font-size="13.680" font-weight="400" font-style="normal">k</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="49.000" y="275.000" font-size="14.000" font-weight="700" font-style="normal">TIER</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="112.097" y="275.000" font-size="14.000" font-weight="700" font-style="normal">ERROR</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="206.595" y="275.000" font-size="14.000" font-weight="700" font-style="normal">COUNT</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="56.257" y="303.610" font-size="17.000" font-weight="700" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="139.942" y="304.270" font-size="19.000" font-weight="400" font-style="normal">E</tspan><tspan x="151.947" y="308.830" font-size="13.680" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="221.838" y="304.270" font-size="19.000" font-weight="400" font-style="normal">N</tspan><tspan x="236.051" y="308.830" font-size="13.680" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="62.171" y="341.610" font-size="17.000" font-weight="700" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="144.294" y="342.270" font-size="19.000" font-weight="400" font-style="normal">E</tspan><tspan x="156.299" y="346.830" font-size="13.680" font-weight="400" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="226.190" y="342.270" font-size="19.000" font-weight="400" font-style="normal">N</tspan><tspan x="240.403" y="346.830" font-size="13.680" font-weight="400" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="62.171" y="379.610" font-size="17.000" font-weight="700" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="144.294" y="380.270" font-size="19.000" font-weight="400" font-style="normal">E</tspan><tspan x="156.299" y="384.830" font-size="13.680" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="226.190" y="380.270" font-size="19.000" font-weight="400" font-style="normal">N</tspan><tspan x="240.403" y="384.830" font-size="13.680" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="68.086" y="417.610" font-size="17.000" font-weight="700" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="148.646" y="418.270" font-size="19.000" font-weight="400" font-style="normal">E</tspan><tspan x="160.651" y="422.830" font-size="13.680" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="230.542" y="418.270" font-size="19.000" font-weight="400" font-style="normal">N</tspan><tspan x="244.755" y="422.830" font-size="13.680" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="334.000" y="99.000" font-size="17.000" font-weight="700" font-style="normal">GLOBAL BER TEST</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="1058.388" y="99.000" font-size="15.000" font-weight="400" font-style="normal">G = 16,617,216</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="406.637" y="138.600" font-size="20.000" font-weight="400" font-style="normal">× 10</tspan><tspan x="455.201" y="130.200" font-size="14.400" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="416.193" y="196.600" font-size="20.000" font-weight="400" font-style="normal">× G</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="302.000" y="177.000" font-size="15.000" font-weight="400" font-style="normal">E</tspan><tspan x="311.478" y="180.600" font-size="10.800" font-weight="400" font-style="normal">w</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="302.000" y="224.000" font-size="15.000" font-weight="400" font-style="normal">B</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="574.770" y="171.240" font-size="28.000" font-weight="700" font-style="normal">≤</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="666.735" y="210.110" font-size="17.000" font-weight="400" font-style="normal">B = 0</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="781.419" y="170.940" font-size="18.000" font-weight="700" font-style="normal">OR</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#285e86"><tspan x="947.121" y="172.260" font-size="22.000" font-weight="700" font-style="normal">target_met</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="345.000" y="269.000" font-size="16.000" font-weight="700" font-style="normal">SHARED × UNIT</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="548.000" y="269.000" font-size="16.000" font-weight="700" font-style="normal">PRODUCT REGISTERS</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="817.000" y="269.000" font-size="15.000" font-weight="700" font-style="normal">CMP / SEL</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="959.000" y="269.000" font-size="15.000" font-weight="700" font-style="normal">WINNER RECORDS</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="304.000" y="352.000" font-size="13.000" font-weight="400" font-style="normal">M, E, N</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="353.656" y="356.000" font-size="17.000" font-weight="700" font-style="normal">SEL</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#ac3540"><tspan x="450.175" y="365.000" font-size="33.000" font-weight="700" font-style="normal">×</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="438.633" y="421.000" font-size="15.000" font-weight="400" font-style="normal">32 × 9</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="567.467" y="326.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="578.840" y="331.260" font-size="12.960" font-weight="400" font-style="normal">256</tspan><tspan x="603.577" y="326.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="617.042" y="331.260" font-size="12.960" font-weight="400" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="680.467" y="326.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="691.840" y="331.260" font-size="12.960" font-weight="400" font-style="normal">64</tspan><tspan x="708.331" y="326.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="721.796" y="331.260" font-size="12.960" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="575.713" y="374.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="587.086" y="379.260" font-size="12.960" font-weight="400" font-style="normal">16</tspan><tspan x="603.577" y="374.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="617.042" y="379.260" font-size="12.960" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="688.713" y="374.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="700.086" y="379.260" font-size="12.960" font-weight="400" font-style="normal">4</tspan><tspan x="708.331" y="374.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="721.796" y="379.260" font-size="12.960" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="579.203" y="422.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="590.576" y="427.260" font-size="12.960" font-weight="400" font-style="normal">A</tspan><tspan x="599.441" y="422.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="612.906" y="427.260" font-size="12.960" font-weight="400" font-style="normal">B</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="692.203" y="422.940" font-size="18.000" font-weight="400" font-style="normal">E</tspan><tspan x="703.576" y="427.260" font-size="12.960" font-weight="400" font-style="normal">B</tspan><tspan x="712.467" y="422.940" font-size="18.000" font-weight="400" font-style="normal">N</tspan><tspan x="725.932" y="427.260" font-size="12.960" font-weight="400" font-style="normal">A</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="825.488" y="320.000" font-size="16.000" font-weight="700" font-style="normal">CMP / SEL</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="851.424" y="335.000" font-size="13.000" font-weight="400" font-style="normal">N &gt; 0</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="825.488" y="368.000" font-size="16.000" font-weight="700" font-style="normal">CMP / SEL</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="851.424" y="383.000" font-size="13.000" font-weight="400" font-style="normal">N &gt; 0</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="825.488" y="416.000" font-size="16.000" font-weight="700" font-style="normal">CMP / SEL</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="851.424" y="431.000" font-size="13.000" font-weight="400" font-style="normal">N &gt; 0</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="969.471" y="326.610" font-size="17.000" font-weight="400" font-style="normal">R</tspan><tspan x="981.283" y="330.690" font-size="12.240" font-weight="400" font-style="normal">A</tspan><tspan x="989.657" y="326.610" font-size="17.000" font-weight="400" font-style="normal">: M, E, N</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#202832"><tspan x="969.459" y="374.610" font-size="17.000" font-weight="400" font-style="normal">R</tspan><tspan x="981.271" y="378.690" font-size="12.240" font-weight="400" font-style="normal">B</tspan><tspan x="989.669" y="374.610" font-size="17.000" font-weight="400" font-style="normal">: M, E, N</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#ac3540"><tspan x="958.094" y="422.940" font-size="18.000" font-weight="700" font-style="normal">j</tspan><tspan x="964.264" y="427.260" font-size="12.960" font-weight="700" font-style="normal">w</tspan><tspan x="976.237" y="422.940" font-size="18.000" font-weight="700" font-style="normal">  ·  tier ID</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#687787"><tspan x="1108.690" y="348.000" font-size="14.000" font-weight="700" font-style="normal">A/B</tspan></text>
+</svg>

@@ -1,0 +1,72 @@
+% Publication-level normal search for per_qam_margin_ctrl_balanced(2).v.
+% This is a core-algorithm abstraction, not cycle-accurate RTL pseudocode.
+% RTL watchdog exits (1000 upward updates / 1000 accepted reductions) are
+% excluded from the displayed core and explicitly acknowledged below it.
+% For the implementation paragraph: the upward limit is checked after the
+% BER test; its last allowed scan may still enter refinement. A refinement
+% limit exit retains the last accepted candidate. Either limit streams the
+% retained map and asserts timeout. Timeout does not imply convergence.
+% Descending-tier priority on equal upward group means is explicit.
+% Downward candidates all start from one common retained margin vector.
+% A feasible equal-bit move is allowed; B*=-1 also admits zero-bit candidates.
+% A strict candidate comparison and ascending QAM order preserve RTL ties.
+% End markers are suppressed; indentation defines while/for/if scope.
+\documentclass[border=0pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\newlength{\algindent}
+\setlength{\algindent}{10pt}
+\newcommand{\kw}[1]{\textbf{#1}}
+\newcommand{\fn}[1]{\operatorname{#1}}
+\newcommand{\algline}[3]{\par\noindent
+  \makebox[11pt][r]{\textcolor[gray]{0.40}{\fontsize{7}{9}\selectfont #1}}\hspace{5pt}%
+  \hspace*{\dimexpr#2\algindent\relax}#3\par}
+\begin{document}
+\begin{minipage}{8.45cm}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\fontsize{8.35}{10.6}\selectfont
+\hrule height 0.55pt
+\vspace{3pt}
+{\fontsize{8.9}{10.6}\selectfont\textbf{Algorithm 1}\quad Per-QAM margin search and refinement\par}
+\vspace{3pt}
+\hrule height 0.35pt
+\vspace{4pt}
+\textbf{Input:} per-tone SNRs $\{\gamma_k\}$; base thresholds $\{T_M\}$.\par
+\textbf{Output:} per-tone QAM allocation $\{M_k\}$.\par
+$\Delta=6554/2^{16}$ dB; $P_{b,\mathrm{target}}=10^{-4}$.\par
+\vspace{4pt}
+\algline{1}{0}{$\boldsymbol\mu\leftarrow\mathbf0$; $P_{\mathrm{acc}}\leftarrow P_{b,\mathrm{target}}-2^{-20}$}
+\algline{2}{0}{$(P,\cdot,\{\bar p_M\})\leftarrow\fn{Scan}(\boldsymbol\mu)$}
+\algline{3}{0}{\kw{while} $P>P_{\mathrm{acc}}$ \kw{do}}
+\algline{4}{1}{$M_w\leftarrow\arg\max_{M\text{ active}}\bar p_M$ \quad{\fontsize{7.5}{9}\selectfont(ties: larger $M$)}}
+\algline{5}{1}{$\mu_{M_w}\leftarrow\mu_{M_w}+\Delta$}
+\algline{6}{1}{$(P,\cdot,\{\bar p_M\})\leftarrow\fn{Scan}(\boldsymbol\mu)$}
+\vspace{3pt}
+\algline{7}{0}{\kw{repeat}}
+\algline{8}{1}{$(\boldsymbol\mu^*,B^*)\leftarrow(\boldsymbol\mu,-1)$}
+\algline{9}{1}{\kw{for} $M\in(4,16,64,256)$ \kw{with} $\mu_M\ge\Delta$ \kw{do}}
+\algline{10}{2}{$\boldsymbol\mu'\leftarrow\boldsymbol\mu$; $\mu'_M\leftarrow\mu_M-\Delta$}
+\algline{11}{2}{$(P',B',\cdot)\leftarrow\fn{Scan}(\boldsymbol\mu')$}
+\algline{12}{2}{\kw{if} $P'\le P_{\mathrm{acc}}$ \kw{and} $B'>B^*$ \kw{then}}
+\algline{13}{3}{$(\boldsymbol\mu^*,B^*)\leftarrow(\boldsymbol\mu',B')$}
+\algline{14}{1}{$\boldsymbol\mu\leftarrow\boldsymbol\mu^*$}
+\algline{15}{0}{\kw{until} $B^*=-1$}
+\algline{16}{0}{\kw{return} $\fn{FinalScan}(\boldsymbol\mu)$}
+\vspace{4pt}
+\hrule height 0.35pt
+\vspace{3.5pt}
+{\fontsize{7.5}{9.0}\selectfont
+$\fn{Scan}(\boldsymbol\mu)$ selects the highest QAM order satisfying
+$\gamma_{k,\mathrm{dB}}\ge T_M+\mu_M$ (otherwise the tone is unused), then
+returns bit-weighted estimated BER $P$, total loaded bits $B$, and
+mean BER $\bar p_M$ for each nonempty QAM group. Set $P=0$ when $B=0$.
+$\fn{FinalScan}$ streams the retained allocation.\par
+\vspace{2.5pt}
+\textit{Normal search is shown; RTL watchdog exits are omitted.}\par}
+\vspace{3.5pt}
+\hrule height 0.55pt
+\end{minipage}
+\end{document}

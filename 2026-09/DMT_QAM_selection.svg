@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="600" viewBox="0 0 1080 600">
+<title>DMT_QAM_selection</title>
+<rect width="1080" height="600" fill="white"/>
+<rect x="5" y="5" width="1070" height="590" rx="0" fill="none" stroke="#111111" stroke-width="3"/>
+<rect x="145" y="231" width="491" height="77" rx="0" fill="#fff0f0" stroke="#cf242b" stroke-width="1.5" stroke-dasharray="7 5"/>
+<rect x="46" y="536" width="992" height="32" rx="0" fill="#f0f0f0" stroke="none" stroke-width="2"/>
+<rect x="613" y="536" width="210" height="32" rx="0" fill="#f5bdc0" stroke="none" stroke-width="2"/>
+<path d="M 25,105 L 1055,105" fill="none" stroke="#bbbbbb" stroke-width="1"/>
+<path d="M 48,179 L 113,179 L 113,395" fill="none" stroke="#111111" stroke-width="2.2"/>
+<path d="M 113,179 L 318,179" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,179 309.0,174.6 309.0,183.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<circle cx="113" cy="179" r="3" fill="#111111" stroke="#111111" stroke-width="0"/>
+<path d="M 260,214 L 318,214" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,214 309.0,209.6 309.0,218.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 450,197 L 538,197" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="538,197 529.0,192.6 529.0,201.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 585,197 L 642,197" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="642,197 633.0,192.6 633.0,201.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 113,251 L 318,251" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,251 309.0,246.6 309.0,255.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<circle cx="113" cy="251" r="3" fill="#111111" stroke="#111111" stroke-width="0"/>
+<path d="M 260,286 L 318,286" fill="none" stroke="#cf242b" stroke-width="2"/>
+<polygon points="318,286 309.0,281.6 309.0,290.4" fill="#cf242b" stroke="#cf242b" stroke-width="0.5"/>
+<path d="M 450,269 L 538,269" fill="none" stroke="#cf242b" stroke-width="2"/>
+<polygon points="538,269 529.0,264.6 529.0,273.4" fill="#cf242b" stroke="#cf242b" stroke-width="0.5"/>
+<path d="M 585,269 L 642,269" fill="none" stroke="#cf242b" stroke-width="2.5"/>
+<polygon points="642,269 633.0,264.6 633.0,273.4" fill="#cf242b" stroke="#cf242b" stroke-width="0.5"/>
+<path d="M 113,323 L 318,323" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,323 309.0,318.6 309.0,327.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<circle cx="113" cy="323" r="3" fill="#111111" stroke="#111111" stroke-width="0"/>
+<path d="M 260,358 L 318,358" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,358 309.0,353.6 309.0,362.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 450,341 L 538,341" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="538,341 529.0,336.6 529.0,345.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 585,341 L 642,341" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="642,341 633.0,336.6 633.0,345.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 113,395 L 318,395" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,395 309.0,390.6 309.0,399.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<circle cx="113" cy="395" r="3" fill="#111111" stroke="#111111" stroke-width="0"/>
+<path d="M 260,430 L 318,430" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="318,430 309.0,425.6 309.0,434.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 450,413 L 538,413" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="538,413 529.0,408.6 529.0,417.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 585,413 L 642,413" fill="none" stroke="#111111" stroke-width="2"/>
+<polygon points="642,413 633.0,408.6 633.0,417.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 843,301 L 880,301" fill="none" stroke="#cf242b" stroke-width="2.5"/>
+<polygon points="880,301 871.0,296.6 871.0,305.4" fill="#cf242b" stroke="#cf242b" stroke-width="0.5"/>
+<path d="M 25,488 L 1055,488" fill="none" stroke="#999999" stroke-width="1.2"/>
+<path d="M 46,568 L 1048,568" fill="none" stroke="#111111" stroke-width="1.7"/>
+<polygon points="1048,568 1039.0,563.6 1039.0,572.4" fill="#111111" stroke="#111111" stroke-width="0.5"/>
+<path d="M 209,532 L 209,575" fill="none" stroke="#111111" stroke-width="1.6"/>
+<path d="M 411,532 L 411,575" fill="none" stroke="#111111" stroke-width="1.6"/>
+<path d="M 613,532 L 613,575" fill="none" stroke="#111111" stroke-width="1.6"/>
+<path d="M 823,532 L 823,575" fill="none" stroke="#111111" stroke-width="1.6"/>
+<path d="M 650,529 L 650,574" fill="none" stroke="#cf242b" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="25" y="40" width="298" height="49" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="30.0" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="100.5" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="171.0" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="241.5" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="373" y="40" width="298" height="49" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="378.0" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="448.5" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="519.0" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="589.5" y="45" width="67.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="725" y="40" width="330" height="49" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="730.0" y="45" width="75.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="808.5" y="45" width="75.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="887.0" y="45" width="75.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="965.5" y="45" width="75.5" height="39" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.6"/>
+<rect x="642" y="158" width="201" height="289" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2.4"/>
+<rect x="166" y="197" width="94" height="34" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="318" y="163" width="132" height="68" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="538" y="173" width="47" height="48" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="166" y="269" width="94" height="34" rx="0" fill="#ffffff" stroke="#cf242b" stroke-width="2"/>
+<rect x="318" y="235" width="132" height="68" rx="0" fill="#ffffff" stroke="#cf242b" stroke-width="2"/>
+<rect x="538" y="245" width="47" height="48" rx="0" fill="#fff0f0" stroke="#cf242b" stroke-width="2"/>
+<rect x="166" y="341" width="94" height="34" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="318" y="307" width="132" height="68" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="538" y="317" width="47" height="48" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="166" y="413" width="94" height="34" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="318" y="379" width="132" height="68" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="538" y="389" width="47" height="48" rx="0" fill="#ffffff" stroke="#111111" stroke-width="2"/>
+<rect x="880" y="268" width="164" height="66" rx="0" fill="#fbdcde" stroke="#cf242b" stroke-width="2.3"/>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="67.727" y="30.000" font-size="18.000" font-weight="700" font-style="normal">Base thresholds (dB)</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="47.051" y="72.000" font-size="24.000" font-weight="700" font-style="normal">24</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="117.551" y="72.000" font-size="24.000" font-weight="700" font-style="normal">18</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="188.051" y="72.000" font-size="24.000" font-weight="700" font-style="normal">12</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="266.900" y="72.000" font-size="24.000" font-weight="700" font-style="normal">6</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="456.579" y="30.000" font-size="18.000" font-weight="700" font-style="normal">Margins (dB)</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="381.211" y="72.000" font-size="24.000" font-weight="700" font-style="normal">m</tspan><tspan x="406.219" y="77.760" font-size="17.280" font-weight="700" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="457.723" y="72.000" font-size="24.000" font-weight="700" font-style="normal">m</tspan><tspan x="482.730" y="77.760" font-size="17.280" font-weight="700" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="528.223" y="72.000" font-size="24.000" font-weight="700" font-style="normal">m</tspan><tspan x="553.230" y="77.760" font-size="17.280" font-weight="700" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="604.734" y="72.000" font-size="24.000" font-weight="700" font-style="normal">m</tspan><tspan x="629.742" y="77.760" font-size="17.280" font-weight="700" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="763.345" y="30.000" font-size="18.000" font-weight="700" font-style="normal">Effective thresholds (dB)</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="741.471" y="72.000" font-size="24.000" font-weight="700" font-style="normal">θ</tspan><tspan x="757.959" y="77.760" font-size="17.280" font-weight="700" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="825.982" y="72.000" font-size="24.000" font-weight="700" font-style="normal">θ</tspan><tspan x="842.471" y="77.760" font-size="17.280" font-weight="700" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="904.482" y="72.000" font-size="24.000" font-weight="700" font-style="normal">θ</tspan><tspan x="920.971" y="77.760" font-size="17.280" font-weight="700" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="988.994" y="72.000" font-size="24.000" font-weight="700" font-style="normal">θ</tspan><tspan x="1005.482" y="77.760" font-size="17.280" font-weight="700" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="335.013" y="73.000" font-size="31.000" font-weight="400" font-style="normal">+</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="684.013" y="72.000" font-size="31.000" font-weight="400" font-style="normal">=</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="158.627" y="137.000" font-size="19.000" font-weight="700" font-style="normal">Threshold</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="314.888" y="137.000" font-size="19.000" font-weight="700" font-style="normal">Comparators</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="492.014" y="137.000" font-size="19.000" font-weight="700" font-style="normal">Example bits</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="873.410" y="244.000" font-size="19.000" font-weight="700" font-style="normal">Selected QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="32.530" y="170.000" font-size="26.000" font-weight="700" font-style="normal">γ</tspan><tspan x="50.240" y="176.240" font-size="18.720" font-weight="700" font-style="normal">k,dB</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="185.626" y="222.000" font-size="25.000" font-weight="700" font-style="normal">θ</tspan><tspan x="202.801" y="228.000" font-size="18.000" font-weight="700" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.674" y="189.000" font-size="18.000" font-weight="400" font-style="normal">γ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.494" y="222.000" font-size="18.000" font-weight="400" font-style="normal">θ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="381.918" y="207.000" font-size="36.000" font-weight="700" font-style="normal">≥</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="472.797" y="185.000" font-size="21.000" font-weight="400" font-style="normal">c</tspan><tspan x="484.343" y="190.040" font-size="15.120" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="551.411" y="207.000" font-size="29.000" font-weight="700" font-style="normal">0</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="659.000" y="205.000" font-size="22.000" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="191.888" y="294.000" font-size="25.000" font-weight="700" font-style="normal">θ</tspan><tspan x="209.063" y="300.000" font-size="18.000" font-weight="700" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="332.674" y="261.000" font-size="18.000" font-weight="400" font-style="normal">γ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="332.494" y="294.000" font-size="18.000" font-weight="400" font-style="normal">θ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="381.918" y="279.000" font-size="36.000" font-weight="700" font-style="normal">≥</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="477.607" y="257.000" font-size="21.000" font-weight="400" font-style="normal">c</tspan><tspan x="489.153" y="262.040" font-size="15.120" font-weight="400" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="551.411" y="279.000" font-size="29.000" font-weight="700" font-style="normal">1</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="659.000" y="277.000" font-size="22.000" font-weight="700" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="191.888" y="366.000" font-size="25.000" font-weight="700" font-style="normal">θ</tspan><tspan x="209.063" y="372.000" font-size="18.000" font-weight="700" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.674" y="333.000" font-size="18.000" font-weight="400" font-style="normal">γ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.494" y="366.000" font-size="18.000" font-weight="400" font-style="normal">θ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="381.918" y="351.000" font-size="36.000" font-weight="700" font-style="normal">≥</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="477.607" y="329.000" font-size="21.000" font-weight="400" font-style="normal">c</tspan><tspan x="489.153" y="334.040" font-size="15.120" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="551.411" y="351.000" font-size="29.000" font-weight="700" font-style="normal">1</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="659.000" y="349.000" font-size="22.000" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="198.150" y="438.000" font-size="25.000" font-weight="700" font-style="normal">θ</tspan><tspan x="215.325" y="444.000" font-size="18.000" font-weight="700" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.674" y="405.000" font-size="18.000" font-weight="400" font-style="normal">γ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="332.494" y="438.000" font-size="18.000" font-weight="400" font-style="normal">θ</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="381.918" y="423.000" font-size="36.000" font-weight="700" font-style="normal">≥</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="482.417" y="401.000" font-size="21.000" font-weight="400" font-style="normal">c</tspan><tspan x="493.963" y="406.040" font-size="15.120" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="551.411" y="423.000" font-size="29.000" font-weight="700" font-style="normal">1</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="659.000" y="421.000" font-size="22.000" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="702.451" y="268.000" font-size="23.000" font-weight="700" font-style="normal">Priority</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="698.593" y="297.000" font-size="23.000" font-weight="700" font-style="normal">encoder</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="706.998" y="328.000" font-size="18.000" font-weight="400" font-style="normal">highest M</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="897.826" y="309.000" font-size="29.000" font-weight="700" font-style="normal">64-QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="890.203" y="368.000" font-size="24.000" font-weight="700" font-style="normal">M</tspan><tspan x="914.086" y="373.760" font-size="17.280" font-weight="700" font-style="normal">k</tspan><tspan x="925.578" y="368.000" font-size="24.000" font-weight="700" font-style="normal"> = 64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#555555"><tspan x="664.629" y="470.000" font-size="19.000" font-weight="400" font-style="normal">All c</tspan><tspan x="704.670" y="474.560" font-size="13.680" font-weight="400" font-style="normal">M</tspan><tspan x="716.473" y="470.000" font-size="19.000" font-weight="400" font-style="normal"> = 0 → OFF</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="32.000" y="515.000" font-size="18.000" font-weight="700" font-style="normal">Ordered-threshold example</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#555555"><tspan x="832.343" y="515.000" font-size="20.000" font-weight="400" font-style="normal">θ</tspan><tspan x="844.579" y="519.800" font-size="14.400" font-weight="400" font-style="normal">4</tspan><tspan x="853.741" y="515.000" font-size="20.000" font-weight="400" font-style="normal"> &lt; θ</tspan><tspan x="895.450" y="519.800" font-size="14.400" font-weight="400" font-style="normal">16</tspan><tspan x="913.773" y="515.000" font-size="20.000" font-weight="400" font-style="normal"> &lt; θ</tspan><tspan x="955.482" y="519.800" font-size="14.400" font-weight="400" font-style="normal">64</tspan><tspan x="973.806" y="515.000" font-size="20.000" font-weight="400" font-style="normal"> &lt; θ</tspan><tspan x="1015.515" y="519.800" font-size="14.400" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="104.229" y="558.000" font-size="21.000" font-weight="700" font-style="normal">OFF</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="270.835" y="558.000" font-size="21.000" font-weight="700" font-style="normal">4-QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="465.529" y="558.000" font-size="21.000" font-weight="700" font-style="normal">16-QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="671.529" y="558.000" font-size="21.000" font-weight="700" font-style="normal">64-QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="876.723" y="558.000" font-size="21.000" font-weight="700" font-style="normal">256-QAM</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="198.836" y="590.000" font-size="19.000" font-weight="400" font-style="normal">θ</tspan><tspan x="210.460" y="594.560" font-size="13.680" font-weight="400" font-style="normal">4</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="396.484" y="590.000" font-size="19.000" font-weight="400" font-style="normal">θ</tspan><tspan x="408.109" y="594.560" font-size="13.680" font-weight="400" font-style="normal">16</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="598.484" y="590.000" font-size="19.000" font-weight="400" font-style="normal">θ</tspan><tspan x="610.109" y="594.560" font-size="13.680" font-weight="400" font-style="normal">64</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#111111"><tspan x="804.132" y="590.000" font-size="19.000" font-weight="400" font-style="normal">θ</tspan><tspan x="815.757" y="594.560" font-size="13.680" font-weight="400" font-style="normal">256</tspan></text>
+<text font-family="DejaVu Sans, Arial, sans-serif" fill="#cf242b"><tspan x="625.023" y="529.000" font-size="20.000" font-weight="700" font-style="normal">γ</tspan><tspan x="638.646" y="533.800" font-size="14.400" font-weight="700" font-style="normal">k,dB</tspan></text>
+</svg>
