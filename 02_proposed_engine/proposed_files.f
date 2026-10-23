@@ -1,0 +1,3 @@
+rtl/per_qam_datapath_balanced.v
+rtl/per_qam_margin_ctrl_balanced.v
+rtl/per_qam_bitloading_pipeline_top_balanced.v

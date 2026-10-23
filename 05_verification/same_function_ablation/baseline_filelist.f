@@ -1,0 +1,3 @@
+baseline_datapath_unoptimized.v
+baseline_margin_ctrl_unoptimized.v
+baseline_top_unoptimized.v

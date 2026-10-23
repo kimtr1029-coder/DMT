@@ -1,0 +1,6 @@
++incdir+rtl
+rtl/piecewise_cheb_coeff_rom_q30.v
+rtl/cheb_poly_degree4_q30_pipe.v
+rtl/per_qam_datapath_chebyshev_q24.v
+rtl/per_qam_margin_ctrl_direct_erfc.v
+rtl/per_qam_bitloading_pipeline_top_chebyshev_q24.v

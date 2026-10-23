@@ -1,0 +1,4 @@
+PROFILE=channel25
+cycles=51109 us@100MHz=511.09 updates=180 accepts=0 scans=4 bits=1044 rate_Gbps=37.8260869565
+runtime_estimated_BER=9.77245555527e-05 offline_exact_BER=9.77361640428e-05 exact_target_violation=0
+tiers unused=10 qam4=76 qam16=74 qam64=82 qam256=13 final_stream=255

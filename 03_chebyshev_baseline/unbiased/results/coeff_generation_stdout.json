@@ -1,0 +1,393 @@
+{
+  "function": "h(z)=erfc(sqrt(z))",
+  "domain_z": [
+    1.25,
+    12.25
+  ],
+  "input_grid": "every Q16 z code",
+  "fitting_method": "numpy.polynomial.chebyshev.chebfit",
+  "fit_samples_per_segment": 4001,
+  "q_formats": {
+    "input_snr": "Q16",
+    "coefficients": "Q30",
+    "output_ber": "Q24"
+  },
+  "segments": 44,
+  "segment_width": 0.25,
+  "degree": 4,
+  "coefficient_bank_bits": 7040,
+  "one_sided_bias_applied": false,
+  "post_fit_minimax_optimization_applied": false,
+  "chebyshev_audit": {
+    "method": "unbiased degree-4 piecewise Chebyshev-basis least-squares fit",
+    "h_error": {
+      "minimum_signed": -3.998919607950402e-08,
+      "maximum_signed": 3.7507303943251635e-08,
+      "maximum_absolute": 3.998919607950402e-08,
+      "rmse": 2.0655523389862867e-09,
+      "negative_codes": 363139,
+      "positive_codes": 357757,
+      "zero_codes": 0
+    },
+    "qam": {
+      "4": {
+        "z_buckets": 720896,
+        "underestimating_buckets_at_worst_endpoint": 465952,
+        "overestimating_buckets_at_best_endpoint": 363360,
+        "minimum_signed_error": -5.966100276241781e-07,
+        "maximum_signed_error": 4.732169674170894e-08,
+        "maximum_absolute_error": 5.966100276241781e-07,
+        "maximum_relative_underestimate_target_band": 0.0005945298682683509,
+        "maximum_relative_overestimate_target_band": 0.0005983565219760717,
+        "false_safe_target_crossing_buckets": 0,
+        "false_reject_target_crossing_buckets": 9
+      },
+      "16": {
+        "z_buckets": 720896,
+        "underestimating_buckets_at_worst_endpoint": 458643,
+        "overestimating_buckets_at_best_endpoint": 454065,
+        "minimum_signed_error": -4.565120327731931e-07,
+        "maximum_signed_error": 3.564560367846914e-07,
+        "maximum_absolute_error": 4.565120327731931e-07,
+        "maximum_relative_underestimate_target_band": 0.000604605125721382,
+        "maximum_relative_overestimate_target_band": 0.0005975006467152146,
+        "false_safe_target_crossing_buckets": 0,
+        "false_reject_target_crossing_buckets": 9
+      },
+      "64": {
+        "z_buckets": 720896,
+        "underestimating_buckets_at_worst_endpoint": 466174,
+        "overestimating_buckets_at_best_endpoint": 429900,
+        "minimum_signed_error": -4.200325269751448e-07,
+        "maximum_signed_error": 2.7390316489211974e-07,
+        "maximum_absolute_error": 4.200325269751448e-07,
+        "maximum_relative_underestimate_target_band": 0.0006108938832406458,
+        "maximum_relative_overestimate_target_band": 0.0005892318129915127,
+        "false_safe_target_crossing_buckets": 0,
+        "false_reject_target_crossing_buckets": 8
+      },
+      "256": {
+        "z_buckets": 720896,
+        "underestimating_buckets_at_worst_endpoint": 490842,
+        "overestimating_buckets_at_best_endpoint": 276981,
+        "minimum_signed_error": -5.032419988955372e-07,
+        "maximum_signed_error": 7.369637318108135e-08,
+        "maximum_absolute_error": 5.032419988955372e-07,
+        "maximum_relative_underestimate_target_band": 0.0006343632849019756,
+        "maximum_relative_overestimate_target_band": 0.0005679714763264954,
+        "false_safe_target_crossing_buckets": 0,
+        "false_reject_target_crossing_buckets": 6
+      }
+    }
+  },
+  "coefficients_q30": [
+    [
+      104426148,
+      -16327762,
+      1391568,
+      -90666,
+      5346
+    ],
+    [
+      76690354,
+      -11697103,
+      956012,
+      -58034,
+      3069
+    ],
+    [
+      56701634,
+      -8480688,
+      671388,
+      -38672,
+      1886
+    ],
+    [
+      42144721,
+      -6204101,
+      478993,
+      -26500,
+      1214
+    ],
+    [
+      31458804,
+      -4570388,
+      345786,
+      -18531,
+      809
+    ],
+    [
+      23565166,
+      -3385686,
+      251911,
+      -13158,
+      552
+    ],
+    [
+      17704560,
+      -2519526,
+      184857,
+      -9454,
+      385
+    ],
+    [
+      13335155,
+      -1882085,
+      136451,
+      -6856,
+      272
+    ],
+    [
+      10066081,
+      -1410437,
+      101212,
+      -5010,
+      194
+    ],
+    [
+      7612938,
+      -1059895,
+      75381,
+      -3684,
+      140
+    ],
+    [
+      5767340,
+      -798376,
+      56337,
+      -2723,
+      102
+    ],
+    [
+      4375713,
+      -602640,
+      42230,
+      -2022,
+      75
+    ],
+    [
+      3324327,
+      -455730,
+      31738,
+      -1506,
+      55
+    ],
+    [
+      2528613,
+      -345197,
+      23907,
+      -1126,
+      41
+    ],
+    [
+      1925463,
+      -261855,
+      18045,
+      -844,
+      30
+    ],
+    [
+      1467640,
+      -198897,
+      13644,
+      -635,
+      23
+    ],
+    [
+      1119691,
+      -151256,
+      10333,
+      -478,
+      17
+    ],
+    [
+      854946,
+      -115151,
+      7837,
+      -361,
+      13
+    ],
+    [
+      653299,
+      -87751,
+      5951,
+      -273,
+      10
+    ],
+    [
+      499567,
+      -66931,
+      4525,
+      -206,
+      7
+    ],
+    [
+      382262,
+      -51094,
+      3444,
+      -157,
+      5
+    ],
+    [
+      292680,
+      -39034,
+      2624,
+      -119,
+      4
+    ],
+    [
+      224220,
+      -29842,
+      2001,
+      -90,
+      3
+    ],
+    [
+      171864,
+      -22829,
+      1527,
+      -69,
+      2
+    ],
+    [
+      131799,
+      -17476,
+      1166,
+      -52,
+      2
+    ],
+    [
+      101122,
+      -13385,
+      891,
+      -40,
+      1
+    ],
+    [
+      77619,
+      -10257,
+      682,
+      -30,
+      1
+    ],
+    [
+      59603,
+      -7865,
+      522,
+      -23,
+      1
+    ],
+    [
+      45787,
+      -6033,
+      400,
+      -18,
+      1
+    ],
+    [
+      35186,
+      -4630,
+      306,
+      -14,
+      0
+    ],
+    [
+      27049,
+      -3555,
+      235,
+      -10,
+      0
+    ],
+    [
+      20801,
+      -2730,
+      180,
+      -8,
+      0
+    ],
+    [
+      16001,
+      -2098,
+      138,
+      -6,
+      0
+    ],
+    [
+      12313,
+      -1612,
+      106,
+      -5,
+      0
+    ],
+    [
+      9477,
+      -1240,
+      81,
+      -4,
+      0
+    ],
+    [
+      7296,
+      -953,
+      63,
+      -3,
+      0
+    ],
+    [
+      5619,
+      -734,
+      48,
+      -2,
+      0
+    ],
+    [
+      4328,
+      -565,
+      37,
+      -2,
+      0
+    ],
+    [
+      3335,
+      -435,
+      28,
+      -1,
+      0
+    ],
+    [
+      2570,
+      -335,
+      22,
+      -1,
+      0
+    ],
+    [
+      1981,
+      -258,
+      17,
+      -1,
+      0
+    ],
+    [
+      1527,
+      -199,
+      13,
+      -1,
+      0
+    ],
+    [
+      1178,
+      -153,
+      10,
+      0,
+      0
+    ],
+    [
+      908,
+      -118,
+      8,
+      0,
+      0
+    ]
+  ]
+}

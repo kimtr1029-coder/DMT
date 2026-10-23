@@ -1,0 +1,354 @@
+yowasp-yosys: fetched 0% (0 / 53963000)
+yowasp-yosys: fetched 20% (10618880 / 53963000)
+yowasp-yosys: fetched 100% (53926307 / 53963000)
+yowasp-yosys: fetched 100% (53960988 / 53963000)
+yowasp-yosys: fetched 100% (53962370 / 53963000)
+yowasp-yosys: fetched 100% (53963000 / 53963000)
+
+-- Running command `read_verilog -sv *.v; hierarchy -check -top per_qam_datapath_chebyshev_q24; proc; check; write_cxxrtl -header chebyshev_sim.cpp' --
+
+1. Executing Verilog-2005 frontend: cheb_poly_degree4_q30_pipe.v
+Parsing SystemVerilog input from `cheb_poly_degree4_q30_pipe.v' to AST representation.
+Generating RTLIL representation for module `\cheb_poly_degree4_q30_pipe'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: per_qam_bitloading_pipeline_top_chebyshev_q24.v
+Parsing SystemVerilog input from `per_qam_bitloading_pipeline_top_chebyshev_q24.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_bitloading_pipeline_top_chebyshev_q24'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: per_qam_datapath_chebyshev_q24.v
+Parsing SystemVerilog input from `per_qam_datapath_chebyshev_q24.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_datapath_chebyshev_q24'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: per_qam_margin_ctrl_direct_erfc.v
+Parsing SystemVerilog input from `per_qam_margin_ctrl_direct_erfc.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_margin_ctrl_direct_erfc'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: piecewise_cheb_coeff_rom_q30.v
+Parsing SystemVerilog input from `piecewise_cheb_coeff_rom_q30.v' to AST representation.
+Generating RTLIL representation for module `\piecewise_cheb_coeff_rom_q30'.
+Successfully finished Verilog frontend.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \per_qam_datapath_chebyshev_q24
+Used module:     \cheb_poly_degree4_q30_pipe
+Used module:         \piecewise_cheb_coeff_rom_q30
+Parameter \TAG_WIDTH = 5
+
+6.2. Executing AST frontend in derive mode using pre-parsed AST for module `\cheb_poly_degree4_q30_pipe'.
+Parameter \TAG_WIDTH = 5
+Generating RTLIL representation for module `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101'.
+
+6.3. Analyzing design hierarchy..
+Top module:  \per_qam_datapath_chebyshev_q24
+Used module:     $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:         \piecewise_cheb_coeff_rom_q30
+
+6.4. Analyzing design hierarchy..
+Top module:  \per_qam_datapath_chebyshev_q24
+Used module:     $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:         \piecewise_cheb_coeff_rom_q30
+Removing unused module `\per_qam_margin_ctrl_direct_erfc'.
+Removing unused module `\per_qam_bitloading_pipeline_top_chebyshev_q24'.
+Removing unused module `\cheb_poly_degree4_q30_pipe'.
+Removed 3 unused modules.
+
+7. Executing PROC pass (convert processes to netlists).
+
+7.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:120$128 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:81$123 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:128$119 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:88$103 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:72$97 in module per_qam_datapath_chebyshev_q24.
+Marked 4 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:35$92 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$piecewise_cheb_coeff_rom_q30.v:13$304 in module piecewise_cheb_coeff_rom_q30.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:53$371 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:52$354 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:51$337 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:50$320 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:55$317 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Removed a total of 0 dead cases.
+
+7.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 10 redundant assignments.
+Promoted 64 assignments to connections.
+
+7.4. Executing PROC_INIT pass (extract init attributes).
+
+7.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+Found async reset \rst_n in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+
+7.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~10 debug messages>
+
+7.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+     1/1: $1\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.$result[23:0]$132
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+     1/1: $1\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.$result[23:0]$127
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+     1/3: $0\o_subcarrier_err[23:0]
+     2/3: $0\o_m_tier[2:0]
+     3/3: $0\o_valid[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+     1/1: $0\valid_st2[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+     1/1: $0\valid_st1[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+     1/4: $4\next_m_tier[2:0]
+     2/4: $3\next_m_tier[2:0]
+     3/4: $2\next_m_tier[2:0]
+     4/4: $1\next_m_tier[2:0]
+Creating decoders for process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+     1/1: { $1\o_c4[31:0] $1\o_c3[31:0] $1\o_c2[31:0] $1\o_c1[31:0] $1\o_c0[31:0] }
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.$result[31:0]$380
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.magnitude[63:0]$381
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.$result[31:0]$363
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.magnitude[63:0]$364
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.$result[31:0]$346
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.magnitude[63:0]$347
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.$result[31:0]$329
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.magnitude[63:0]$330
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+     1/5: $0\valid_4[0:0]
+     2/5: $0\valid_3[0:0]
+     3/5: $0\valid_2[0:0]
+     4/5: $0\valid_1[0:0]
+     5/5: $0\valid_0[0:0]
+
+7.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$85.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$84.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\next_m_tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c0' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c1' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c2' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c3' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c4' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$308.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$312.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$307.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$311.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$306.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$310.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$305.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$309.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+
+7.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_valid' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$463' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_subcarrier_err' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$468' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_m_tier' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$473' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\tier_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+  created $dff cell `$procdff$474' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\z_q16_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+  created $dff cell `$procdff$475' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\valid_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+  created $adff cell `$procdff$480' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\tier_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+  created $dff cell `$procdff$481' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\snr_linear_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+  created $dff cell `$procdff$482' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\valid_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+  created $adff cell `$procdff$487' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$488' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$489' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$490' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$491' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$492' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$493' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$494' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$495' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$496' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c3_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$497' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c2_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$498' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$499' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$500' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c2_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$501' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$502' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$503' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$504' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$505' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$506' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$507' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$508' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$509' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$510' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+  created $dff cell `$procdff$511' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+  created $adff cell `$procdff$516' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+  created $adff cell `$procdff$521' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+  created $adff cell `$procdff$526' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+  created $adff cell `$procdff$531' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+  created $adff cell `$procdff$536' with positive edge clock and positive level reset.
+
+7.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+Found and cleaned up 1 empty switch in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+Found and cleaned up 4 empty switches in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+Found and cleaned up 1 empty switch in `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+Removing empty process `piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$371'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$354'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$337'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$320'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$319'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$317'.
+Cleaned up 11 empty switches.
+
+7.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module per_qam_datapath_chebyshev_q24.
+<suppressed ~11 debug messages>
+Optimizing module piecewise_cheb_coeff_rom_q30.
+Optimizing module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+<suppressed ~18 debug messages>
+
+8. Executing CHECK pass (checking for obvious problems).
+Checking module per_qam_datapath_chebyshev_q24...
+Checking module piecewise_cheb_coeff_rom_q30...
+Checking module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101...
+Found and reported 0 problems.
+
+9. Executing CXXRTL backend.
+
+9.1. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `per_qam_datapath_chebyshev_q24'. Setting top module to per_qam_datapath_chebyshev_q24.
+
+9.1.1. Analyzing design hierarchy..
+Top module:  \per_qam_datapath_chebyshev_q24
+Used module:     $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:         \piecewise_cheb_coeff_rom_q30
+
+9.1.2. Analyzing design hierarchy..
+Top module:  \per_qam_datapath_chebyshev_q24
+Used module:     $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:         \piecewise_cheb_coeff_rom_q30
+Removed 0 unused modules.
+
+9.2. Executing FLATTEN pass (flatten design).
+Deleting now unused module piecewise_cheb_coeff_rom_q30.
+Deleting now unused module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+<suppressed ~2 debug messages>
+
+9.3. Executing PROC pass (convert processes to netlists).
+
+9.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+9.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+9.3.4. Executing PROC_INIT pass (extract init attributes).
+
+9.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+9.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+9.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+9.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+9.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+9.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module per_qam_datapath_chebyshev_q24.
+
+<suppressed ~12 debug messages>
+
+End of script. Logfile hash: 5ce4fa437e, time: 0.40s, user: 0.42s, system: 0.00s
+Yosys 0.64 (git sha1 ca8886890, ccache clang++  -O3 -fwasm-exceptions -mllvm) [yowasp/yosys at release]
+Time spent: 37% 6x read_verilog (0 sec), 21% 2x opt_expr (0 sec), ...

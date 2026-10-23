@@ -1,0 +1,5 @@
+QAM,max_relative_underestimate_percent,max_relative_overestimate_percent,false_safe_target_crossing_buckets,false_reject_target_crossing_buckets
+4,0.059452986827,0.059835652198,0,9
+16,0.060460512572,0.059750064672,0,9
+64,0.061089388324,0.058923181299,0,8
+256,0.063436328490,0.056797147633,0,6

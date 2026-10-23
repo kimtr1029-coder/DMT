@@ -1,0 +1,69 @@
+RTL BASELINE COMPARISON - INDEPENDENT VERIFICATION
+Build ID: RTL_BASELINE_COMPARISON_20260813
+Date: 2026-08-13
+============================================================
+
+1. SYNTAX AND ELABORATION
+-------------------------
+- All six synthesizable RTL files and both SystemVerilog testbenches were
+  parsed without syntax errors by a SystemVerilog-1800-2023 tree-sitter parser.
+- Both top modules were elaborated with hierarchy/port checking by
+  Yosys 0.64 CXXRTL build.
+- proc/opt/check -assert completed for both synthesizable designs.
+
+2. GENERIC MULTIPLIER INTENT AFTER RTL ELABORATION
+--------------------------------------------------
+Common target-RHS product, present in both designs:
+  1 x 12x16 -> 28
+
+Same-function wide/parallel baseline:
+  6 x 48x9  -> 57  (four pairwise and two final cross products)
+  1 x 32x32 -> 64  (K*SNR)
+  1 x 32x32 -> 64  (C*LUT)
+  Total generic multiply cells including target product: 9
+
+Proposed engine:
+  1 x 32x9  -> 41  (explicitly shared across six decision cycles)
+  1 x 32x16 -> 48  (K*SNR)
+  1 x 16x17 -> 33  (C*LUT)
+  Total generic multiply cells including target product: 4
+
+These are technology-independent RTL elaboration results, not Quartus area,
+DSP, Fmax, or power results. Quartus may further trim/map/share logic.
+
+3. INDEPENDENT CYCLE-ACCURATE CXXRTL REGRESSION
+-----------------------------------------------
+Stimulus:
+  two_null_snr_db_q16.mem
+  two_null_snr_linear_q16.mem
+
+Absolute golden map:
+  two_null_expected_qam.mem (255 entries)
+
+Observed result:
+  proposed_cycles = 57853
+  baseline_cycles = 57113
+  proposed_minus_baseline = 740
+  upward_updates = 185
+  refinement_accepts = 6
+  refinement_scans = 28
+  total_bits = 1034
+  weighted_err_q24 = 1709300
+  margins_q16 [4,16,64,256] = [183512,321146,327700,340808]
+  proposed output count = 255
+  baseline output count = 255
+  all 255 proposed tiers == all 255 baseline tiers == golden tiers
+  status = CXXRTL_EQUIVALENCE_PASS
+
+The 740-cycle delta is exactly 185 upward updates x 4 additional cycles in
+the proposed shared-multiplier tournament.
+
+4. REMAINING USER-SIDE SIGN-OFF
+-------------------------------
+- Run run_modelsim_baseline_vs_proposed.do in the user's ModelSim/Questa.
+- Synthesize baseline and proposed as separate Quartus projects with identical
+  device, version, settings, seed, and SDC.
+- Generate reportable post-fit VCD/SAIF activity and record annotation coverage.
+- Fill SYNTHESIS_RESULTS_TEMPLATE.csv from the actual reports.
+
+No Quartus area/power/Fmax numbers are predicted or fabricated in this file.

@@ -1,0 +1,841 @@
+yowasp-yosys: fetched 0% (0 / 53963000)
+yowasp-yosys: fetched 20% (10618880 / 53963000)
+yowasp-yosys: fetched 100% (53926307 / 53963000)
+yowasp-yosys: fetched 100% (53960988 / 53963000)
+yowasp-yosys: fetched 100% (53962370 / 53963000)
+yowasp-yosys: fetched 100% (53963000 / 53963000)
+
+-- Running command `read_verilog -sv *.v; hierarchy -check -top channel_latency_chebyshev_top; proc; check; write_cxxrtl -header chebyshev_full_sim.cpp' --
+
+1. Executing Verilog-2005 frontend: channel_latency_chebyshev_top.v
+Parsing SystemVerilog input from `channel_latency_chebyshev_top.v' to AST representation.
+Generating RTLIL representation for module `\channel_latency_chebyshev_top'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: cheb_poly_degree4_q30_pipe.v
+Parsing SystemVerilog input from `cheb_poly_degree4_q30_pipe.v' to AST representation.
+Generating RTLIL representation for module `\cheb_poly_degree4_q30_pipe'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: per_qam_bitloading_pipeline_top_chebyshev_q24.v
+Parsing SystemVerilog input from `per_qam_bitloading_pipeline_top_chebyshev_q24.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_bitloading_pipeline_top_chebyshev_q24'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: per_qam_datapath_chebyshev_q24.v
+Parsing SystemVerilog input from `per_qam_datapath_chebyshev_q24.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_datapath_chebyshev_q24'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: per_qam_margin_ctrl_direct_erfc.v
+Parsing SystemVerilog input from `per_qam_margin_ctrl_direct_erfc.v' to AST representation.
+Generating RTLIL representation for module `\per_qam_margin_ctrl_direct_erfc'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: piecewise_cheb_coeff_rom_q30.v
+Parsing SystemVerilog input from `piecewise_cheb_coeff_rom_q30.v' to AST representation.
+Generating RTLIL representation for module `\piecewise_cheb_coeff_rom_q30'.
+Successfully finished Verilog frontend.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \channel_latency_chebyshev_top
+Used module:     \per_qam_bitloading_pipeline_top_chebyshev_q24
+Used module:         \per_qam_datapath_chebyshev_q24
+Used module:             \cheb_poly_degree4_q30_pipe
+Used module:                 \piecewise_cheb_coeff_rom_q30
+Used module:         \per_qam_margin_ctrl_direct_erfc
+Parameter \N_SUBCARRIERS = 255
+Parameter \MAX_MARGIN_UPDATES = 1000
+Parameter \MAX_REFINEMENT_ACCEPTS = 1000
+Parameter \MARGIN_STEP_Q16 = 6554
+Parameter \TARGET_RHS_PER_BIT_Q24 = 25'0111111011000111100000000
+
+7.2. Executing AST frontend in derive mode using pre-parsed AST for module `\per_qam_margin_ctrl_direct_erfc'.
+Parameter \N_SUBCARRIERS = 255
+Parameter \MAX_MARGIN_UPDATES = 1000
+Parameter \MAX_REFINEMENT_ACCEPTS = 1000
+Parameter \MARGIN_STEP_Q16 = 6554
+Parameter \TARGET_RHS_PER_BIT_Q24 = 25'0111111011000111100000000
+Generating RTLIL representation for module `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc'.
+Parameter \TAG_WIDTH = 5
+
+7.3. Executing AST frontend in derive mode using pre-parsed AST for module `\cheb_poly_degree4_q30_pipe'.
+Parameter \TAG_WIDTH = 5
+Generating RTLIL representation for module `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101'.
+
+7.4. Analyzing design hierarchy..
+Top module:  \channel_latency_chebyshev_top
+Used module:     \per_qam_bitloading_pipeline_top_chebyshev_q24
+Used module:         \per_qam_datapath_chebyshev_q24
+Used module:             $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:                 \piecewise_cheb_coeff_rom_q30
+Used module:         $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc
+
+7.5. Analyzing design hierarchy..
+Top module:  \channel_latency_chebyshev_top
+Used module:     \per_qam_bitloading_pipeline_top_chebyshev_q24
+Used module:         \per_qam_datapath_chebyshev_q24
+Used module:             $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:                 \piecewise_cheb_coeff_rom_q30
+Used module:         $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc
+Removing unused module `\per_qam_margin_ctrl_direct_erfc'.
+Removing unused module `\cheb_poly_degree4_q30_pipe'.
+Removed 2 unused modules.
+
+8. Executing PROC pass (convert processes to netlists).
+
+8.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+8.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$piecewise_cheb_coeff_rom_q30.v:13$304 in module piecewise_cheb_coeff_rom_q30.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:53$542 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:52$525 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:51$508 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:50$491 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$cheb_poly_degree4_q30_pipe.v:55$488 in module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:120$128 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:81$123 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:128$119 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:88$103 in module per_qam_datapath_chebyshev_q24.
+Marked 1 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:72$97 in module per_qam_datapath_chebyshev_q24.
+Marked 4 switch rules as full_case in process $proc$per_qam_datapath_chebyshev_q24.v:35$92 in module per_qam_datapath_chebyshev_q24.
+Marked 27 switch rules as full_case in process $proc$per_qam_margin_ctrl_direct_erfc.v:188$317 in module $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.
+Marked 1 switch rules as full_case in process $proc$per_qam_margin_ctrl_direct_erfc.v:174$316 in module $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.
+Removed a total of 0 dead cases.
+
+8.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 15 redundant assignments.
+Promoted 82 assignments to connections.
+
+8.4. Executing PROC_INIT pass (extract init attributes).
+
+8.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+Found async reset \rst_n in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+Found async reset \rst_n in `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+
+8.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~43 debug messages>
+
+8.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+     1/1: { $1\o_c4[31:0] $1\o_c3[31:0] $1\o_c2[31:0] $1\o_c1[31:0] $1\o_c0[31:0] }
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.$result[31:0]$551
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.magnitude[63:0]$552
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.$result[31:0]$534
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.magnitude[63:0]$535
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.$result[31:0]$517
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.magnitude[63:0]$518
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+     1/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.$result[31:0]$500
+     2/2: $1\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.magnitude[63:0]$501
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+Creating decoders for process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+     1/5: $0\valid_4[0:0]
+     2/5: $0\valid_3[0:0]
+     3/5: $0\valid_2[0:0]
+     4/5: $0\valid_1[0:0]
+     5/5: $0\valid_0[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+     1/1: $1\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.$result[23:0]$132
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+     1/1: $1\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.$result[23:0]$127
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+     1/3: $0\o_subcarrier_err[23:0]
+     2/3: $0\o_m_tier[2:0]
+     3/3: $0\o_valid[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+     1/1: $0\valid_st2[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+     1/1: $0\valid_st1[0:0]
+Creating decoders for process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+     1/4: $4\next_m_tier[2:0]
+     2/4: $3\next_m_tier[2:0]
+     3/4: $2\next_m_tier[2:0]
+     4/4: $1\next_m_tier[2:0]
+Creating decoders for process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+Creating decoders for process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+     1/99: $4\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result[3:0]$444
+     2/99: $4\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result[34:0]$436
+     3/99: $3\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result[3:0]$434
+     4/99: $3\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier[2:0]$435
+     5/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result[34:0]$430
+     6/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext[34:0]$433
+     7/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier[2:0]$432
+     8/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24[23:0]$431
+     9/99: $4\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result[3:0]$371
+    10/99: $4\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result[34:0]$363
+    11/99: $3\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result[3:0]$361
+    12/99: $3\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier[2:0]$362
+    13/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result[34:0]$357
+    14/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext[34:0]$360
+    15/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier[2:0]$359
+    16/99: $3\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24[23:0]$358
+    17/99: $2\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier[2:0]$354
+    18/99: $2\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result[3:0]$353
+    19/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext[34:0]$352
+    20/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier[2:0]$351
+    21/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24[23:0]$350
+    22/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result[34:0]$349
+    23/99: $2\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier[2:0]$348
+    24/99: $2\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result[3:0]$347
+    25/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext[34:0]$346
+    26/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier[2:0]$345
+    27/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24[23:0]$344
+    28/99: $2\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result[34:0]$343
+    29/99: $1\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier[2:0]$342
+    30/99: $1\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result[3:0]$341
+    31/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext[34:0]$340
+    32/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier[2:0]$339
+    33/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24[23:0]$338
+    34/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result[34:0]$337
+    35/99: $1\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier[2:0]$336
+    36/99: $1\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result[3:0]$335
+    37/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext[34:0]$334
+    38/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier[2:0]$333
+    39/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24[23:0]$332
+    40/99: $1\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result[34:0]$331
+    41/99: $0\o_done[0:0]
+    42/99: $0\o_final_done[0:0]
+    43/99: $0\o_final_valid[0:0]
+    44/99: $0\o_margin_done[0:0]
+    45/99: $0\o_addr_valid[0:0]
+    46/99: $0\ref_best_margin_4[31:0]
+    47/99: $0\ref_best_margin_16[31:0]
+    48/99: $0\ref_best_margin_64[31:0]
+    49/99: $0\ref_best_margin_256[31:0]
+    50/99: $0\ref_base_margin_4[31:0]
+    51/99: $0\ref_base_margin_16[31:0]
+    52/99: $0\ref_base_margin_64[31:0]
+    53/99: $0\ref_base_margin_256[31:0]
+    54/99: $0\ref_best_weighted_err[34:0]
+    55/99: $0\ref_best_total_bits[11:0]
+    56/99: $0\ref_best_found[0:0]
+    57/99: $0\ref_candidate_idx[1:0]
+    58/99: $0\accepted_total_bits[11:0]
+    59/99: $0\accepted_weighted_err[34:0]
+    60/99: $0\win34_cnt[8:0]
+    61/99: $0\win12_cnt[8:0]
+    62/99: $0\win34_err[31:0]
+    63/99: $0\win12_err[31:0]
+    64/99: $0\win34_id[2:0]
+    65/99: $0\win12_id[2:0]
+    66/99: $0\cross_final_B[40:0]
+    67/99: $0\cross_final_A[40:0]
+    68/99: $0\cross_D[40:0]
+    69/99: $0\cross_C[40:0]
+    70/99: $0\cross_B[40:0]
+    71/99: $0\cross_A[40:0]
+    72/99: $0\cnt_4[8:0]
+    73/99: $0\cnt_16[8:0]
+    74/99: $0\cnt_64[8:0]
+    75/99: $0\cnt_256[8:0]
+    76/99: $0\err_sum_4[31:0]
+    77/99: $0\err_sum_16[31:0]
+    78/99: $0\err_sum_64[31:0]
+    79/99: $0\err_sum_256[31:0]
+    80/99: $0\total_bits_sum[11:0]
+    81/99: $0\weighted_err_sum[34:0]
+    82/99: $0\delay_valid[0:0]
+    83/99: $0\rsp_cnt[8:0]
+    84/99: $0\req_cnt[8:0]
+    85/99: $0\state[4:0]
+    86/99: $0\o_selected_total_bits[11:0]
+    87/99: $0\o_selected_weighted_err_q24[63:0]
+    88/99: $0\o_margin_updates[15:0]
+    89/99: $0\o_margin_timeout[0:0]
+    90/99: $0\o_margin_converged[0:0]
+    91/99: $0\o_margin_4[31:0]
+    92/99: $0\o_margin_16[31:0]
+    93/99: $0\o_margin_64[31:0]
+    94/99: $0\o_margin_256[31:0]
+    95/99: $0\o_final_m_tier[2:0]
+    96/99: $0\o_final_carrier_idx[7:0]
+    97/99: $0\o_refinement_scans[15:0]
+    98/99: $0\o_refinement_accepts[15:0]
+    99/99: $0\o_carrier_idx[7:0]
+Creating decoders for process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:174$316'.
+     1/2: $1\mul_cnt[8:0]
+     2/2: $1\mul_err[31:0]
+
+8.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c0' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c1' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c2' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c3' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `\piecewise_cheb_coeff_rom_q30.\o_c4' from process `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$479.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:53$483.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$478.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:52$482.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$477.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:51$481.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$476.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.$result' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.a_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.b_q30' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.product' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\mul_q30$func$cheb_poly_degree4_q30_pipe.v:50$480.magnitude' from process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$85.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\ber_scale_from_tier$func$per_qam_datapath_chebyshev_q24.v:120$87.tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$84.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.$result' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\z_factor_from_tier$func$per_qam_datapath_chebyshev_q24.v:81$86.tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+No latch inferred for signal `\per_qam_datapath_chebyshev_q24.\next_m_tier' from process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\times_10000$func$per_qam_margin_ctrl_direct_erfc.v:167$305.$result' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\times_10000$func$per_qam_margin_ctrl_direct_erfc.v:167$310.$result' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\times_10000$func$per_qam_margin_ctrl_direct_erfc.v:167$310.value' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\times_10000$func$per_qam_margin_ctrl_direct_erfc.v:167$310.ext' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\mul_err' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:174$316'.
+No latch inferred for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\mul_cnt' from process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:174$316'.
+
+8.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2213' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2214' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2215' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2216' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\p_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2217' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2218' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2219' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2220' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\u_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2221' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c3_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2222' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c2_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2223' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2224' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2225' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c2_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2226' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2227' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2228' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c1_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2229' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2230' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\c0_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2231' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2232' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2233' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2234' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2235' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\tag_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+  created $dff cell `$procdff$2236' with positive edge clock.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_0' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+  created $adff cell `$procdff$2241' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_1' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+  created $adff cell `$procdff$2246' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_2' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+  created $adff cell `$procdff$2251' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_3' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+  created $adff cell `$procdff$2256' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.\valid_4' using process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+  created $adff cell `$procdff$2261' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_valid' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$2266' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_subcarrier_err' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$2271' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\o_m_tier' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+  created $adff cell `$procdff$2276' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\tier_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+  created $dff cell `$procdff$2277' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\z_q16_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+  created $dff cell `$procdff$2278' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\valid_st2' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+  created $adff cell `$procdff$2283' with positive edge clock and positive level reset.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\tier_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+  created $dff cell `$procdff$2284' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\snr_linear_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+  created $dff cell `$procdff$2285' with positive edge clock.
+Creating register for signal `\per_qam_datapath_chebyshev_q24.\valid_st1' using process `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+  created $adff cell `$procdff$2290' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_carrier_idx' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2295' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_done' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2300' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_refinement_accepts' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2305' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_refinement_scans' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2310' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_final_carrier_idx' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2315' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_final_m_tier' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2320' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_final_valid' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2325' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_final_done' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2330' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_addr_valid' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2335' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_256' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2340' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_64' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2345' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_16' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2350' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_4' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2355' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_done' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2360' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_converged' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2365' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_timeout' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2370' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_margin_updates' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2375' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_selected_weighted_err_q24' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2380' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\o_selected_total_bits' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2385' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\state' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2390' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\req_cnt' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2395' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\rsp_cnt' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2400' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\delay_valid' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2405' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_err_sum' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2410' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\total_bits_sum' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2415' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\err_sum_256' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2420' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\err_sum_64' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2425' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\err_sum_16' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2430' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\err_sum_4' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2435' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cnt_256' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2440' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cnt_64' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2445' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cnt_16' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2450' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cnt_4' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2455' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_A' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2460' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_B' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2465' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_C' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2470' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_D' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2475' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_final_A' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2480' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\cross_final_B' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2485' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win12_id' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2490' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win34_id' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2495' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win12_err' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2500' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win34_err' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2505' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win12_cnt' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2510' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\win34_cnt' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2515' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\accepted_weighted_err' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2520' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\accepted_total_bits' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2525' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_candidate_idx' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2530' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_found' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2535' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_total_bits' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2540' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_weighted_err' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2545' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_base_margin_256' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2550' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_base_margin_64' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2555' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_base_margin_16' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2560' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_base_margin_4' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2565' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_margin_256' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2570' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_margin_64' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2575' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_margin_16' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2580' with positive edge clock and positive level reset.
+Creating register for signal `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\ref_best_margin_4' using process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+  created $adff cell `$procdff$2585' with positive edge clock and positive level reset.
+
+8.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+8.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+Removing empty process `piecewise_cheb_coeff_rom_q30.$proc$piecewise_cheb_coeff_rom_q30.v:13$304'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:53$542'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:52$525'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:51$508'.
+Found and cleaned up 1 empty switch in `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:50$491'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:65$490'.
+Removing empty process `$paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.$proc$cheb_poly_degree4_q30_pipe.v:55$488'.
+Found and cleaned up 1 empty switch in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:120$128'.
+Found and cleaned up 1 empty switch in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:81$123'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:128$119'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:92$105'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:88$103'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:76$99'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:72$97'.
+Found and cleaned up 4 empty switches in `\per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+Removing empty process `per_qam_datapath_chebyshev_q24.$proc$per_qam_datapath_chebyshev_q24.v:35$92'.
+Removing empty process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:167$462'.
+Found and cleaned up 32 empty switches in `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+Removing empty process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:188$317'.
+Found and cleaned up 1 empty switch in `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:174$316'.
+Removing empty process `$paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.$proc$per_qam_margin_ctrl_direct_erfc.v:174$316'.
+Cleaned up 44 empty switches.
+
+8.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module piecewise_cheb_coeff_rom_q30.
+Optimizing module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+<suppressed ~18 debug messages>
+Optimizing module per_qam_datapath_chebyshev_q24.
+<suppressed ~11 debug messages>
+Optimizing module per_qam_bitloading_pipeline_top_chebyshev_q24.
+Optimizing module $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.
+<suppressed ~154 debug messages>
+Optimizing module channel_latency_chebyshev_top.
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module piecewise_cheb_coeff_rom_q30...
+Checking module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101...
+Checking module per_qam_datapath_chebyshev_q24...
+Checking module per_qam_bitloading_pipeline_top_chebyshev_q24...
+Checking module $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc...
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.tier [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:481$309.$result [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [34] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [33] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [32] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [31] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [30] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [29] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [28] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [27] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [26] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [25] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [24] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.ext [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.tier [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.err_q24 [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [34] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [33] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [32] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [31] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [30] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [29] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [28] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [27] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [26] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [25] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [24] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:480$308.$result [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.tier [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\bits_from_tier$func$per_qam_margin_ctrl_direct_erfc.v:296$307.$result [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [34] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [33] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [32] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [31] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [30] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [29] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [28] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [27] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [26] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [25] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [24] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.ext [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.tier [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.err_q24 [0] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [34] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [33] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [32] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [31] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [30] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [29] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [28] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [27] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [26] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [25] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [24] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [23] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [22] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [21] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [20] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [19] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [18] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [17] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [16] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [15] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [14] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [13] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [12] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [11] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [10] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [9] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [8] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [7] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [6] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [5] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [4] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [3] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [2] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [1] is used but has no driver.
+Warning: Wire $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.\weighted_error_term$func$per_qam_margin_ctrl_direct_erfc.v:295$306.$result [0] is used but has no driver.
+Checking module channel_latency_chebyshev_top...
+Found and reported 208 problems.
+
+10. Executing CXXRTL backend.
+
+10.1. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `channel_latency_chebyshev_top'. Setting top module to channel_latency_chebyshev_top.
+
+10.1.1. Analyzing design hierarchy..
+Top module:  \channel_latency_chebyshev_top
+Used module:     \per_qam_bitloading_pipeline_top_chebyshev_q24
+Used module:         \per_qam_datapath_chebyshev_q24
+Used module:             $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:                 \piecewise_cheb_coeff_rom_q30
+Used module:         $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc
+
+10.1.2. Analyzing design hierarchy..
+Top module:  \channel_latency_chebyshev_top
+Used module:     \per_qam_bitloading_pipeline_top_chebyshev_q24
+Used module:         \per_qam_datapath_chebyshev_q24
+Used module:             $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101
+Used module:                 \piecewise_cheb_coeff_rom_q30
+Used module:         $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc
+Removed 0 unused modules.
+
+10.2. Executing FLATTEN pass (flatten design).
+Deleting now unused module piecewise_cheb_coeff_rom_q30.
+Deleting now unused module $paramod\cheb_poly_degree4_q30_pipe\TAG_WIDTH=s32'00000000000000000000000000000101.
+Deleting now unused module per_qam_datapath_chebyshev_q24.
+Deleting now unused module per_qam_bitloading_pipeline_top_chebyshev_q24.
+Deleting now unused module $paramod$7a2a0085b56e3f84ab999537b4f81febafa02695\per_qam_margin_ctrl_direct_erfc.
+<suppressed ~5 debug messages>
+
+10.3. Executing PROC pass (convert processes to netlists).
+
+10.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+10.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+10.3.4. Executing PROC_INIT pass (extract init attributes).
+
+10.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+10.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+10.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+10.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+10.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+10.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+10.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+10.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module channel_latency_chebyshev_top.
+
+<suppressed ~12 debug messages>
+
+Warnings: 208 unique messages, 208 total
+End of script. Logfile hash: 029f800d61, time: 0.46s, user: 0.48s, system: 0.00s
+Yosys 0.64 (git sha1 ca8886890, ccache clang++  -O3 -fwasm-exceptions -mllvm) [yowasp/yosys at release]
+Time spent: 26% 7x read_verilog (0 sec), 20% 2x opt_expr (0 sec), ...

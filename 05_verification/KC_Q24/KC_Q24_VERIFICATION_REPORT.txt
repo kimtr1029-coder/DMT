@@ -1,0 +1,36 @@
+ITEM 1: K/C AUTO-GENERATION AND EXHAUSTIVE VERIFICATION
+==========================================================================
+Reference date       : 2026-08-13
+Estimator arithmetic : Q16 K, Q16 C, 32-entry Q16 LUT, Q24 BER output
+K candidate space    : all 65,536 unsigned 16-bit codes (0...65535)
+C candidate limit    : unsigned 16-bit (0...65535)
+Direct guarantee     : base threshold through exact BER >= 2^-20
+
+GLOBAL SEARCH RESULT
+--------------------------------------------------------------------------
+QAM  K_Q16  C_Q16  Intervals  Valid K  Min(est/exact)  Max(est/exact)
+  4  50734  12756        464    57596  1.000003296861  1.194710934171
+ 16  10213  10206        473    11807  1.000086956350  1.224691028657
+ 64   2436   8057        466     2874  1.000051466519  1.230309867429
+256    602   6506        458      725  1.000134940559  1.234443529019
+
+LITERAL INTEGER-CODE CROSS-CHECK
+--------------------------------------------------------------------------
+QAM  Input codes  Violations  Minimum-ratio code  Maximum-ratio code
+  4      1225858           0              261907              785718
+ 16      6214078           0             1038676             3548299
+ 64     25662805           0             4135042            14380470
+256    101812565           0            16498525            58636648
+
+Total directly enumerated Q16 codes: 134,915,306
+
+RTL CONSISTENCY
+--------------------------------------------------------------------------
+K/C parameters : 8 of 8 match FINAL_Q24_REFINE_datapath_20260812.v
+LUT entries    : 32 of 32 match floor(2^(-address/32)*65536)
+
+PASS: exhaustive global K search reproduced the checked RTL constants.
+PASS: interval partitions contain no gap or overlap.
+PASS: literal enumeration found zero one-sided BER violations.
+PASS: interval and literal extrema are identical.
+==========================================================================

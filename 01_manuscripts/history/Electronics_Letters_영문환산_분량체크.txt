@@ -1,0 +1,23 @@
+Electronics Letters English-equivalent length check
+
+Basis:
+- Official Electronics Letters Author Guidelines: Letter main text should be 2500–4200 words.
+- Each figure/table is treated as 800 words.
+- References are excluded from the word count.
+- Uploaded official Word template additionally states a maximum of 6 columns / 3 pages.
+
+This Korean template draft is matched to an English-equivalent draft for length estimation.
+
+English-equivalent textual word count (Abstract through Conclusion, references excluded): 1128 words
+English abstract word count: 135 words
+Planned figures: 3
+Figure-equivalent count: 3 × 800 = 2400 words
+Total estimated equivalent length: 3528 words-equivalent
+
+Guideline range: 2500–4200 words-equivalent
+Margin to upper limit: 672 words-equivalent
+
+Note:
+- This is a conservative pre-submission planning count based on a matched English draft.
+- The final English manuscript should be counted again in Word after the three final figures and captions are inserted.
+- No tables are currently planned.
